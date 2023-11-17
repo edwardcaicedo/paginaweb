@@ -1,0 +1,95 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+.seccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   margin-top: 10rem;
+    background-image: url(/img/seccion.jpg);
+    background-size: contain;
+    background-repeat: center;
+    padding: 2rem;
+    
+
+}
+
+.seccion h1, h2 {
+    color: white;
+    padding: 1rem;
+    text-transform: capitalize;
+}
+
+.seccion__campos input {
+   display: flex;
+   flex-direction: column;
+   width: 25rem;
+   height: 2rem;
+   border-radius: 1rem;
+   text-align: center;
+   font-weight: bold;
+}
+h2 {
+    padding: 2rem;
+}
+
+.seccion__btn {
+   height: 2rem;
+   border-radius: 1rem;
+   text-align: center;
+   font-weight: bold;
+   margin-left: 8rem;
+   color: white;
+   font-weight: bold;
+   background-color: black;
+   border: none;
+}
+
+.seccion__btn:hover {
+    cursor: pointer;
+    color: red;
+    transition: all .3s;
+}
+
+.seccion__btn {
+    padding: 2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+/*bienvenidos*/
+
+.header {
+    background-color: #330001;
+     
+   
+}
+
+.header__compa {
+    text-align: center;
+    padding-top: 8rem;
+}
+h1 {
+    margin: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    width: 20rem;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    left: 30rem;
+    border-radius: 4rem;
+}
