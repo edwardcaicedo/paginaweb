@@ -1,95 +1,166 @@
-
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Add box-sizing to include padding and border in element's total width and height */
 }
 
 body {
     font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    padding: 0;
 }
 
+.contendor {
+    background-image: url(/img/seccio1.jpg);
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+}
 
+.product-comp {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid for responsiveness */
+    gap: 20px;
+}
 
 .seccion {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-   margin-top: 10rem;
-    background-image: url(/img/seccion.jpg);
-    background-size: contain;
-    background-repeat: center;
-    padding: 2rem;
-    
-
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    top: 10rem;
+    left: 20rem;
+    width: 40rem;
+    padding: 5rem;
+    border-radius: 3px;
+    margin: 0 auto; /* Center the element */
 }
 
-.seccion h1, h2 {
-    color: white;
-    padding: 1rem;
+input {
+    width: 100%; /* Make input width 100% */
+    max-width: 25rem; /* Set max-width for larger screens */
+    height: 1.8rem;
+    border-radius: 10px;
+    text-align: center;
     text-transform: capitalize;
+    margin-bottom: 10px;
 }
 
-.seccion__campos input {
-   display: flex;
-   flex-direction: column;
-   width: 25rem;
-   height: 2rem;
-   border-radius: 1rem;
-   text-align: center;
-   font-weight: bold;
-}
 h2 {
-    padding: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .seccion__btn {
-   height: 2rem;
-   border-radius: 1rem;
-   text-align: center;
-   font-weight: bold;
-   margin-left: 8rem;
-   color: white;
-   font-weight: bold;
-   background-color: black;
-   border: none;
+    background-color: #a70606;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    border: navajowhite;
+    margin-top: 10px;
 }
 
 .seccion__btn:hover {
     cursor: pointer;
-    color: red;
-    transition: all .3s;
-}
-
-.seccion__btn {
-    padding: 2rem;
+    background-color: white;
+    color: #a70606;
     font-weight: bold;
-    text-transform: capitalize;
+    transition: all 2s;
 }
-
-
-/*bienvenidos*/
 
 .header {
     background-color: #330001;
-     
-   
 }
 
 .header__compa {
     text-align: center;
     padding-top: 8rem;
 }
+
 h1 {
     margin: 2rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     background-color: black;
     color: white;
-    width: 20rem;
+    width: 100%; /* Make h1 width 100% */
+    max-width: 20rem; /* Set max-width for larger screens */
     padding: 2rem;
     text-align: center;
-    position: relative;
-    left: 30rem;
+    margin: 0 auto; /* Center the element */
     border-radius: 4rem;
+    margin-bottom: 20px;
+}
+
+.objeto {
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    width: 100%; /* Make object width 100% */
+}
+
+.objeto img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.objeto h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.objeto p {
+    margin-bottom: 5px;
+}
+
+#lista-objetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid for responsiveness */
+    gap: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Set max-width for larger screens */
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+.pruduct {
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 0 20px rgb(0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.btn{
+    background-color: black;
+    color: wheat;
+    border-radius: 5px;
+}
+.btn:hover{
+    background-color: #949494;
+}
+.celular-txt h2{
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.celular-txt img{
+    flex-basis: 50%;
+    width: 200px;
+}
+.celular-txt p{
+    font-weight: bold;
 }

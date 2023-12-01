@@ -7,28 +7,19 @@
     <link rel="stylesheet" href="/css/stylos.css">
 </head>
 <body>
+    <main class="contendor">
+        
+        <form class="seccion" action="bienvenidos.html">
+            <h2>login</h2>
+                <input id="email" type="email" placeholder="Email"><br>
+                <input id="password" type="password" placeholder="Contraseña"><br>
+                <p id="mensaje"></p>
+                <p id="mensajes2"></p>
+                <button type="button" class="seccion__btn" id="boton" onclick="validarLogin()">Iniciar seccion</button>
     
-    <form class="seccion">
-        <h1>Pc-Frankenstein</h1>
-        <h2>login</h2>
-        
-        <div class="seccion__campos">
-
-            <input id="idUsuario" type="email" placeholder="usuario"><br>
-
-            <input id="idContraseña" type="password" placeholder="contraseña"><br>
-            <p id="mensaje"></p>
-            <p id="mensajes2"></p>
-            <button class="seccion__btn" id="boton" onclick="logear()">Iniciar seccion</button>
-
-        </div>
-        
-    </form>
-
-
-
-
-
+            
+        </form>
+    </main>
     <script src="/js/app.js"></script>
     
 </body>
