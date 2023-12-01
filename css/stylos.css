@@ -35,12 +35,12 @@ body {
     width: 40rem;
     padding: 5rem;
     border-radius: 3px;
-    margin: 0 auto; /* Center the element */
+    margin: 0 auto; 
 }
 
 input {
-    width: 100%; /* Make input width 100% */
-    max-width: 25rem; /* Set max-width for larger screens */
+    width: 100%; 
+    max-width: 25rem; 
     height: 1.8rem;
     border-radius: 10px;
     text-align: center;
@@ -85,13 +85,12 @@ h1 {
     margin: 2rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    background-color: black;
+   
     color: white;
-    width: 100%; /* Make h1 width 100% */
-    max-width: 20rem; /* Set max-width for larger screens */
+    width: 100%;
     padding: 2rem;
     text-align: center;
-    margin: 0 auto; /* Center the element */
+    margin: 0 auto; 
     border-radius: 4rem;
     margin-bottom: 20px;
 }
@@ -104,8 +103,7 @@ h1 {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     border-radius: 5px;
-    width: 100%; /* Make object width 100% */
-}
+    width: 100%; 
 
 .objeto img {
     width: 100%;
@@ -130,7 +128,7 @@ h1 {
 
 .container {
     width: 100%;
-    max-width: 1200px; /* Set max-width for larger screens */
+    max-width: 1200px; 
     margin: 0 auto;
     box-sizing: border-box;
     padding: 2px;
@@ -161,6 +159,104 @@ h1 {
     flex-basis: 50%;
     width: 200px;
 }
-.celular-txt p{
+
+.celular-txt p {
     font-weight: bold;
+
+}
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.header__bienvenido {
+    background-image: url(/img/f4.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin-bottom: 20px;
+    border-bottom: 10px solid black;
+}
+
+.header--redes {
+    background-color: white;
+    
+}
+
+.header--redes {
+   display: flex;
+   justify-content: right;
+   padding: 5px;
+   
+}
+.header--redes:hover {
+    cursor: pointer;
+}
+
+.header--redes img {
+    margin-left: 10px;
+}
+
+.header--razoS {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 700px;
+    height: 300px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px;
+    position: relative;
+    left: 300px;
+    top: 100px;
+    border-radius: 8px;
+    text-align: justify;
+    
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    padding: 10px;
+}
+
+.footer__politicas {
+    display: flex;
+    flex-direction: column;
+}
+.footer__politicas a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+
+.footer__politicas a:hover {
+    color: #949494;
+}
+
+
+.filtros h3 {
+    text-align: center;
+    margin: 30px;
+    text-transform: capitalize;
+}
+
+.filtros__conten {
+    position: relative;
+    left: 150px;
+    margin: 20px;
+}
+
+.filtros__conten label {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.filtros__conten button {
+   padding: 4px;
+   text-transform: capitalize;
+   font-weight: bold;
 }

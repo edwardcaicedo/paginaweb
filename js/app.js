@@ -66,28 +66,7 @@ function simulateUserValidation(email, password) {
 }
 
 
-/*
 
-function logear(){
-    let usuar = document.getElementById("idUsuarios").value;
-    let pass = document.getElementById("idContraseña").value;
-    console.log(user);
-    console.log(pass);
-
-    if(usuar === usuarioss[0].user && pass === usuarioss[0].contra){
-        window.location ="bienvenidad.html";
-    } else if (usuar === usuarioss[1].user && pass === usuarioss[1].contra ) {
-        let mens = document.getElementById("mensaje");
-
-    }else if(usuar === usuarioss[2].user && pass === usuarioss[2].contra ){
-
-    }else {
-        validarContraseña();
-    }
-
-
-}
-*/
 
 let objetos = [
     /////portatiles
@@ -725,6 +704,8 @@ let objetos = [
 },
 
 ];
+
+
 function mostrarTodosObjetos() {
     const listaObjetos = document.getElementById('lista-objetos');
     listaObjetos.innerHTML = '';
@@ -778,3 +759,52 @@ function editarObjeto(id) {
 }
 
   mostrarTodosObjetos();
+
+  const paginas = 10;
+
+// Página actual que se mostrará inicialmente.
+let pagina = 1;
+
+// Copia de todos los productos al principio para facilitar el filtrado.
+let filtrarProducto = products.slice();
+
+function rederProductso(){
+    const container = document.getElementById("pruduct");
+    container.innerHTML = "";
+
+    //calcular el indice inicio fin 
+    const inicioIndex = (pagina -1) * paginas;
+    const finIndex = Math.min(inicioIndex + paginas, filtrarProducto.length);
+
+    //crear y agregar las tarjetas 
+    for(let i = inicioIndex; i < finIndex; i++){
+        const tarjeta = crearTarjeta(filtrarProducto[i]);
+        container.appendChild(tarjeta);
+    }
+}
+
+function crearTarjeta(){
+    const listaObjetos = document.getElementById('lista-objetos');
+    listaObjetos.innerHTML = '';
+
+    objetos.forEach(objeto => {
+        const divObjeto = document.createElement('div');
+        divObjeto.classList.add('objeto');
+        divObjeto.innerHTML = `
+        <div class="celular-txt">
+            <img src="${objeto.img}" alt="${objeto.producto}">         
+            <h2>${objeto.producto}</h2>
+            <p>${objeto.descripcion}</p>
+            <p>codigo: ${objeto.codigo}</p>
+            <p>cantidad: ${objeto.cantidad}</p>
+            <p>precio: ${objeto.precio}</p>
+            <p>garantia: ${objeto.garantia}</p>
+            <p>color: ${objeto.color || "No especificado"}</p>
+            <p>hecho: ${objeto.hecho}</p>
+            <p>Disponibilidad: ${objeto.disponibilidad}</p>
+            <button class="btn" onclick="editarObjeto(${objeto.id})">Ver detalle</button>
+            </div>
+        `;
+        listaObjetos.appendChild(divObjeto);
+    });
+}
